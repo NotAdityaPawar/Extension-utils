@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  "name": "My Simple Extension",
+  "description": "A simple extension that changes the background color of the current page.",
+  "version": "1.0",
+  "permissions": ["activeTab"],
+  "browser_action": {
+    "default_popup": "hello.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["scripts/contentScript.js"]
+    }
+  ]
+}
